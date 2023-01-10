@@ -72,7 +72,7 @@ Untracked files:
 git add fichier1.md
 git add fichier2.md
 -Créer un commit "Ajout de fichier2.md et modification de fichier1.md"
-Copier/coller l'ID des deux premiers commits :
+-Copier/coller l'ID des deux premiers commits :
 ID commit 1 : 
 ID commit 2 : 0f533365fde9cae069cc51777cab9bc852aee2b2
 -Que signifie qu'un fichier est "tracked" ou "untracked" ?
