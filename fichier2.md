@@ -1,1 +1,1 @@
-bonjour, j'aime les chiens
+bonjour, j'aime les chiens, et les chats
