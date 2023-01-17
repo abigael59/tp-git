@@ -72,51 +72,71 @@ Untracked files:
 git add fichier1.md
 git add fichier2.md
 -Créer un commit "Ajout de fichier2.md et modification de fichier1.md"
--Copier/coller l'ID des deux premiers commits :
+Copier/coller l'ID des deux premiers commits :
 ID commit 1 : 
 ID commit 2 : 0f533365fde9cae069cc51777cab9bc852aee2b2
+
 -Que signifie qu'un fichier est "tracked" ou "untracked" ?
 Le fichier est suivie ou non suivie 
 -Pourquoi doit-on passer les fichiers par la zone de Staging (l'index) avant de les committer ?
+
 -Créer une branche fonctionnalite1
+git branch fonctionnalite1
 -Lister les branches
+git branch
 -Se déplacer sur la branche fonctionnalite1
+git switch fonctionnalite1
 -Lister les branches
+git branch
 -Que représente l'étoile à côté des noms des branches ?
+c'est la ou on est actuellement et c'est dans cette branch que l'on va agir 
 -Créer un nouveau fichier fichier3.md
-Modifier le fichier fichier2.md
-Comment utiliser VS Code pour qu'il nous montre les différences entre l'ancienne version de fichier2.md et la version courante que l'on vient d'éditer ?
-Committer ces deux modifications : "Fonctionnalité 1 - première phase"
-Créer un nouveau fichier fichier4.md
-Modifier de nouveau le fichier fichier2.md
-Committer ces deux modifications : "Fonctionnalité 1 - terminée"
-Afficher la liste des fichiers du répertoire
-Se déplacer sur la branche master
-Afficher la liste des fichiers du répertoire
-Pourquoi les deux sorties sont-elles différentes ? Les fichiers ont-ils disparus ?
-Créer une nouvelle branche fonctionnalite2
-Cette branche ne va pas avoir toutes les données incluses dans fonctionnalite1. Pourquoi ?
-Qu'aurait-il fallu faire si on avait souhaité démarrer la branche fonctionnalite2 en intégrant les modifications récentes de fonctionnalite1 ?
-Se déplacer sur la nouvelle branche fonctionnalite2
-Créer un nouveau fichier fichier5.md
-Faire un commit intégrant cette ajout : "Ajout fichier5.md"
-Entrer la commande git log --oneline --decorate --graph --all pour visualiser, sur le terminal, le graphe des commits sur toutes les branches
-Noter la « déviation » entre les deux branches, à partir de la branche master
-Installer l'extension VS Code Git Graph et visualiser le graphe actuel des commits à l'aide de cette extension
-Sur cette représentation, que représente les points ?
-Comment voit-on sur quelle branche on est actuellement ?
-On considère que la branche originale (master ou main) est la branche d'intégration, c'est-à-dire celle qui va contenir l'historique de toutes les modifications développées au fur et à mesure dans les branches annexes
-On va maintenant fusionner la branche fonctionnalite1, qui est terminée, avec la branche d'intégration
-Se déplacer sur la branche master
-Noter le changement dans l'onglet Git Graph
-Fusionner avec la branche fonctionnalite1
-Noter le changement dans l'onglet Git Graph. Que signifie la mention Fast-forward indiquée par la sortie de la commande ?
-On veut maintenant fusionner fonctionnalite2 dans la branche d'intégration (master)
-Effectuer cette fusion
-Noter le changement dans l'onglet Git Graph. Que signifie la mention Merge made by the ... strategy indiquée par la sortie de la commande ?
-Quelle est la différence fondamentale avec la fusion précédente ?
-Créer une nouvelle branche fonctionnalite3, se déplacer dessus, et modifier le fichier fichier1.md en y ajoutant une ligne de texte. Committer : "Modification fichier1 pour fonctionnalité 3"
-Comment utiliser Git Graph pour qu'il nous montre les différences entre l'ancienne version de fichier1.md et la version courante que l'on vient de committer ?
+touche fichier3.md
+-Modifier le fichier fichier2.md
+nano fichier2.md "bonjour, j'aime les chiens" 
+-Comment utiliser VS Code pour qu'il nous montre les différences entre l'ancienne version de fichier2.md et la version 
+courante que l'on vient d'éditer ?
+onglet source control
+-Committer ces deux modifications : "Fonctionnalité 1 - première phase"
+-Créer un nouveau fichier fichier4.md
+touch fichier4.md
+-Modifier de nouveau le fichier fichier2.md
+nano fichier2.md
+-Committer ces deux modifications : "Fonctionnalité 1 - terminée"
+-Afficher la liste des fichiers du répertoire
+ls 
+-Se déplacer sur la branche master
+git switch master 
+-Afficher la liste des fichiers du répertoire
+ls 
+-Pourquoi les deux sorties sont-elles différentes ? Les fichiers ont-ils disparus ?
+non ils non pas été crée dans la même branche
+-Créer une nouvelle branche fonctionnalite2
+git branch fonctionnalite2
+-Cette branche ne va pas avoir toutes les données incluses dans fonctionnalite1. Pourquoi ?
+car elle nouvelle et on ne lui a rien affectée 
+-Qu'aurait-il fallu faire si on avait souhaité démarrer la branche fonctionnalite2 en intégrant les modifications récentes de fonctionnalite1 ?
+
+-Se déplacer sur la nouvelle branche fonctionnalite2
+-Créer un nouveau fichier fichier5.md
+-Faire un commit intégrant cette ajout : "Ajout fichier5.md"
+-Entrer la commande git log --oneline --decorate --graph --all pour visualiser, sur le terminal, le graphe des commits sur toutes les branches
+-Noter la « déviation » entre les deux branches, à partir de la branche master
+-Installer l'extension VS Code Git Graph et visualiser le graphe actuel des commits à l'aide de cette extension
+-Sur cette représentation, que représente les points ?
+-Comment voit-on sur quelle branche on est actuellement ?
+-On considère que la branche originale (master ou main) est la branche d'intégration, c'est-à-dire celle qui va contenir l'historique de toutes les modifications développées au fur et à mesure dans les branches annexes
+-On va maintenant fusionner la branche fonctionnalite1, qui est terminée, avec la branche d'intégration
+-Se déplacer sur la branche master
+-Noter le changement dans l'onglet Git Graph
+-Fusionner avec la branche fonctionnalite1
+-Noter le changement dans l'onglet Git Graph. Que signifie la mention Fast-forward indiquée par la sortie de la commande ?
+-On veut maintenant fusionner fonctionnalite2 dans la branche d'intégration (master)
+-Effectuer cette fusion
+-Noter le changement dans l'onglet Git Graph. Que signifie la mention Merge made by the ... strategy indiquée par la sortie de la commande ?
+-Quelle est la différence fondamentale avec la fusion précédente ?
+-Créer une nouvelle branche fonctionnalite3, se déplacer dessus, et modifier le fichier fichier1.md en y ajoutant une ligne de texte. Committer : "Modification fichier1 pour fonctionnalité 3"
+-Comment utiliser Git Graph pour qu'il nous montre les différences entre l'ancienne version de fichier1.md et la version courante que l'on vient de committer ?
 Repartir sur master, et modifier fichier1.md en y ajoutant aussi une ligne (différente de celle qu'on a ajoutée sur l'autre branche)
 Tenter de fusionner la branche fonctionnalite3 avec master
 Que se passe-t-il et pourquoi ?
